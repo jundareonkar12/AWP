@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script>
+           var data=[
+{ 
+  "Itemname": "Shoe",
+  "Price":2500,
+  "Category": "Personal"
+},
+{ 
+  "Itemname": "T-shirt",
+  "Price":1500,
+  "Category": "Garments"
+},
+{ 
+  "Itemname": "BOOK- ignited minds",
+  "Price":350,
+  "Category": "Stationary"
+},
+{ 
+  "Itemname": "Socks",
+  "Price":200,
+  "Category": "Personal"
+},
+{ 
+  "Itemname": "Tie",
+  "Price":1400,
+  "Category": "Garments"
+},
+{ 
+  "Itemname": "Belt",
+  "Price":1500,
+  "Category": "Accessories"
+}
+]
+function display()
+{
+var mytable=document.getElementById("table1");
+for(i=0;i<data.length;i++)
+{
+var myrow=mytable.insertRow(i+1);
+var newcell1=myrow.insertCell(0);
+var newcell2=myrow.insertCell(1);
+var newcell3=myrow.insertCell(2);
+newcell1.innerHTML=data[i].Itemname;
+newcell2.innerHTML=data[i].Price;
+newcell3.innerHTML=data[i].Category;
+}
+}
+          
+        </script>
+        <style>
+            table,th,td{
+                height: 40px;
+                width: 1050px;
+                text-align: center;
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+            tr:nth-child(odd) {
+                background-color:lightgray;
+                            }
+                        
+        </style>
+    </head>
+    <body>
+            <button id="button1" onclick="display()">Display</button> 
+    <div id="div1">
+        <table id="table1" align="center">
+            <tr style="background-color:dodgerblue;">
+                <th> Itemname </th>
+                <th> Price </th>
+                <th> Category </th>
+            </tr>
+
+        </table>
+    </div>       
+    
+    </body>
+    
+</html>

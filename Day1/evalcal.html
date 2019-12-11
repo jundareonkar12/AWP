@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Calculator</title>
+     <h2 style="padding-left:158px">Caculator</h2>
+    <style>
+        body{
+            padding-left: 600px;
+        }
+        .button{
+            height: 413px;
+            width: 100px;
+            font-size:10px;
+            background-color:Highlight;
+        }
+        button {
+            height: 100px;
+            width: 100px;
+            font-size: 20px;
+        }
+
+            button:hover {
+                background-color: lightgray;
+            }
+
+            button:active {
+                background-color: grey;
+            }
+
+        div {
+            font-size: 30px;
+            border: 1px solid;
+            width: 414px;
+            height: 100px;
+        }
+    </style>
+    <script>
+     
+        var x = "";
+        
+        function concat(y)
+        {
+            x = x.concat(y);
+            mydiv.innerHTML = x;                
+        }
+
+        function val()
+        {
+            res = eval(x);
+            mydiv.innerHTML = res;           
+        }
+        function clear1()
+        {
+        
+            res = null;
+            x = null;
+            document.getElementById("mydiv").innerHTML=0;
+           
+           
+        }
+    </script>
+</head>
+<body>
+    <div style="align-items:center">
+    <div id="mydiv">
+
+    </div>
+    <table>
+
+        <tr>
+            <td><button id="one" onclick="concat('1')">1</button></td>
+            <td><button id="two" onclick="concat('2')">2</button></td>
+            <td><button id="three" onclick="concat('3')">3</button></td>
+            <td rowspan="4"><button class="button"  id="equals" onclick="val()">=</button></td>
+        </tr>
+        <tr>
+            <td><button id="four" onclick="concat('4')">4</button></td>
+            <td><button id="five" onclick="concat('5')">5</button></td>
+            <td><button id="six" onclick="concat('6')">6</button></td>
+            
+        </tr>
+        <tr>
+            <td><button id="seven" onclick="concat('7')">7</button></td>
+            <td><button id="eight" onclick="concat('8')">8</button></td>
+            <td><button id="nine" onclick="concat('9')">9</button></td>
+            
+        </tr>
+        <tr>
+            <td><button  onclick="clear1()">C</button></td>
+            <td><button id="0" onclick="concat('0')">0</button></td>
+            <td><button id="." onclick="concat('.')">.</button></td>
+            
+            
+        </tr>
+        <tr>
+            <td><button id="add" onclick="concat('+')">+</button></td>
+            <td><button id="sub" onclick="concat('-')">-</button></td>
+            
+            <td><button id="*" onclick="concat('*')">*</button></td>
+            <td><button id="div" onclick="concat('/')">/</button></td>
+        </tr>
+    </table>
+       </div>
+</body>
+</html>

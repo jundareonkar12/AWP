@@ -1,0 +1,17 @@
+[
+{ 
+  "itemname": "Shoe",
+  "Price":2500,
+  "Category": "Personal"
+},
+{ 
+  "itemname": "T-shirt",
+  "Price":1500,
+  "Category": "Garments"
+},
+{ 
+  "itemname": "BOOK- ignited minds",
+  "Price":350,
+  "Category": "Stationary"
+}
+]

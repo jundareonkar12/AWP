@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    button{
+        background-color: dodgerblue;
+        
+    }
+    tr:nth-child(odd){
+        background-color: lightgrey;
+    }
+    th{
+        position: sticky;
+        top: 0px;
+        background-color: dodgerblue;
+
+    }
+    div{
+        margin-left: 4cm;
+        margin-top: 4cm;
+        width: 1555px;
+        height: 444px;
+    }
+</style>
+    <script type='text/javascript'>
+function GetData(){
+        var myurl = "https://jsonplaceholder.typicode.com/users";
+        var Obj={
+            url: myurl,
+            type: "GET",
+            dataType: "json",
+            
+            success:function(data){
+                console.log(data);
+                var element=$("#mainDiv");
+                var table="<table class='table table-bordered'><tr><th>Name</th><th>Email</th><th>Phone no</th><th>City</th></tr>";
+                $.each(data,function(i,o){
+                    table+="<tr><td>"+o.name+"</td><td>"+o.email+"</td><td>"+o.phone+"</td><td>"+o.address.city+"</td></tr>";
+                });
+                table+="</table>";
+                element.html(table);
+            }
+        }
+        $.ajax(Obj);
+    }
+        </script>
+
+<body>
+        <button onclick="GetData()">Download</button>
+        <div id="mainDiv" style="overflow: scroll;">
+        
+        </div>
+        
+</body>
+</html>

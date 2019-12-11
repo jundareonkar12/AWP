@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            var imagearr=["Images/img1.jpg","Images/img2.jpg","Images/img3.jpg","Images/img4.jpg","Images/img5.jpg"];
+            var i= 0;
+            function output(){
+            $("#screen").css({"background-image":"url('"+imagearr[i]+"')"});
+                i=(i+1)%5;
+            };
+            
+            setInterval(output,2000);
+        });
+    </script>
+    <style>
+        #screen{
+            background-image: url("Images/img1.jpg");
+            width: 1280px;
+            height: 720px;
+           margin-left: 8cm;
+           margin-top: 3cm;
+           
+        }
+        </style>
+
+</head>
+<body>
+    <div id="screen">
+        
+        </div>
+        
+</body>
+</html>

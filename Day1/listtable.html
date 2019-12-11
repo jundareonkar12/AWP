@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Add Students in a array of object.
+    </title>
+<style>
+    body{
+        padding-left: 828px;
+        
+
+
+    }
+    table{
+        
+        border-collapse: collapse;
+        height:2.5cm;
+        width: 8cm;
+    }
+    th{
+        background-color: grey;
+        border: 1px solid black;
+    }
+    </style>
+    <script>
+        var studArray=[];
+        //var nameArray = [{studentPrn:"x",studentName:"y",percent:"z"}];
+        var Student1=
+        {
+            prn:"131",
+            name:"Onkar",
+            percent:"72.8",
+
+        };
+        studArray.push(Student1);
+       // console.log(studArray);
+        function addToList()
+        {
+            var Student2=
+        {
+            prn:document.getElementById("studentPrn").value,
+            name:document.getElementById("studentName").value,
+            percent:document.getElementById("percent").value,
+
+        };
+        studArray.push(Student2);
+            // var nameInputField = document.getElementById("studentPrn");
+            // // nameInputField = document.getElementById("studentName").value;
+            // // nameInputField = document.getElementById("percent").value;
+            // var name = nameInputField.value;
+            // nameArray.push(name);
+
+            var contents = "<br><table border ='1'><tr><th align =right>Prn</th><th align =right>Name</th><th align =right>Percent</th></tr>";
+             
+            var i=0;
+            for(i=0;i<studArray.length;i++)
+            {
+             contents = contents + "<tr><td align= right>"+studArray[i].prn+"</td><td align= right>"+studArray[i].name+"</td><td align= right>"+studArray[i].percent+"</td></tr>";
+            }
+            
+            contents = contents + "</table>";
+            var divList = document.getElementById("divNameList");
+            
+            divList.innerHTML = contents;
+        }
+        
+
+    </script>
+</head>
+<body>
+    Student Prn: <br><input id="studentPrn" type="text" placeholder="Enter prn" /> <br>
+    Student Name:<br> <input id="studentName" type="text" placeholder="Enter name"/> <br>
+    Percentage: <br><input id="percent" type="text"  placeholder="Enter percent"/> <br>
+    <br><button onclick="addToList();" >Add to List</button> <br>
+    
+    
+
+    <div id="divNameList">
+        <!-- <table align="center">
+            <td>
+                <tr align="right"> Prn</tr>
+                <tr align="right"> Name</tr>
+                <tr align="right"> Percent</tr>
+            </td>
+        </table> -->
+           </div>
+
+</body>
+</html>
