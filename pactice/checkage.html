@@ -1,0 +1,40 @@
+<html>
+    <head>
+<style>
+button:active{
+    background-color: rgb(27, 158, 27);
+}
+button:hover{
+    background-color: blueviolet;
+}
+#age{
+    height: 1cm;
+    width:2cm;
+}
+#age:hover{
+    background-color: crimson;
+    font-size: large;
+   
+}
+</style>
+    </head>
+    <body>
+        <input type="number" id="age" style="text-align-last: center;"/>
+        <button onclick="checkage()";>CheckAGE</button>
+        <p id="par">
+            <script>
+                function checkage(){
+                var a=document.getElementById("age").value;
+                
+                if(a>18)
+                {
+                    document.getElementById("par").innerHTML="age is:"+a+"can vote now";
+                }
+                else{
+                    document.getElementById("par").innerHTML="you cant vote as your age is "+a+" which is below 18";
+                }
+                }
+            </script>
+        </p>
+    </body>
+</html>
