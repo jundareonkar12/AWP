@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>first program</title>
+        <style>
+        button{
+            height: 1cm;
+            width: 3cm;    
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        button:active{
+            background-color: aquamarine;
+        }
+        </style>
+        <script>
+           var i=0;
+        function showname()
+        {
+            i=!i;
+            if(i==1){
+                document.getElementById("mydiv").innerHTML="My name  Onkar";
+            }
+            else{
+            
+                document.getElementById("mydiv").innerHTML="";
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+            <button onclick="showname()";id="bt">click</button>
+        <div id="mydiv">
+
+        </div>
+        
+    </body>
+</html>
