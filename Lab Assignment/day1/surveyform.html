@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <style>
+        #divst
+        {
+            width: 90%;
+            margin-left:  5%;
+            height: 80%;
+        }
+        td{
+            padding: 10px;
+        }
+        
+  </style>
+ 
+</head>
+<body style="background-color: turquoise;">
+    <h1><b><center>Survey Form</center></b></h1>
+   <div style="background-color: white; " id="divst">
+
+ <h2><center >Let us know how we can improve freecodecamp</center></h2>
+ <table align="center">
+     <tr><td style="text-align: right;"> <span style="color: red;">*</span>Name:</td><td><input type="text"  placeholder="Enter your name" id="name" minlength="3" maxlength="20" onkeypress="return(event.charCode>64 && event.charCode<91)||(event.charCode>96 && event.charCode<123)" ></td></tr>
+
+ <tr><td style="text-align: right;"><span style="color: red;">*</span>Email </td><td><input type="text"  placeholder="Enter your Email" id="email"></td></tr>
+ <tr><td style="text-align: right;"><span style="color: red;">*</span>Age: </td><td><input type="number"  placeholder="Enter your Age" id="age"></td></tr>
+ <tr><td style="text-align: right;">Which option best describes your current role? </td><td><select name="select" id="sel">
+        <option selected>Student</option>
+        <option>Teacher</option>
+        <option>Employee</option>
+    </select><br></td></tr><br>
+ 
+    <tr>
+        <td style="text-align: right;"><span style="color: red;">*</span>
+        How likely is that you would recommend <br>
+        freecodecamp to a friend: 
+        </td>
+            <td><br>
+                <input type="radio" value="D" name="g">Definately<br>
+                <input type="radio" value="M" name="g">Maybe <br>
+                <input type="radio" value="N" name="g">Not sure  <br>
+             </td>
+            </tr>
+     <tr>
+         <td style="text-align: right;">
+
+         What do you like in FCC: 
+
+     </td>
+        <td><select name="select2" id="sel2">
+            <option aria-placeholder="Select ">Coding</option>
+            <option>Excercise</option>
+            <option>Quiz</option>
+        </select>
+    </td>
+</tr><br>
+ 
+     <tr>
+         <td style="text-align: right;">
+             Things should be improverd in the future<br>
+             (check all that apply):
+          </td>
+          <td><br>
+                <input type="radio" value="F" name="nproj" id="r1">Front-End Projects<br>
+                <input type="radio" value="B" name="nproj" id="r2"> Back-End Projects <br>
+                <input type="radio" value="V" name="nproj" id="r3">Data Visualization  <br>
+          </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td align="left">
+                <button type="submit" id="submit" style="background-color: cornflowerblue;" onclick="checkname()">Submit</button>
+            </td>
+        </tr>
+   </table>
+ 
+</div>
+<div id="div2">
+
+</div>
+<script>
+    function checkname(){
+       var radiovar;
+        var varname=document.getElementById("name").value;
+        var varemail=document.getElementById("email").value;
+        var varage=document.getElementById("age").value;
+           
+        if(varname.length<1)
+        {
+            alert("name should not be empty");
+        }
+        if(!varemail.includes("@"))
+        {
+            alert("please enter proper email");
+        }
+        if(varage<18)
+        {
+        alert("Age below 18");
+        }
+        if(document.getElementById(r1).value=="F")
+        {
+            radiovar="F";
+        }
+        else if(document.getElementById(r2).value=="B")
+        {
+            radiovar="B";
+        }
+        else if(document.getElementById(r3).value=="V")
+        {
+            radiovar="V";
+           
+        }
+
+        var content1="<table><tr><th>Name</th><th>Email</th><th>Age</th><th>Improved_In_Futute</th></tr><tr><td>"+varname+"</td><td>"+varemail+"</td><td>"+varage+"</td><td>"+radiovar+"</td></tr></table>";
+        var abc=document.getElementById("div2").innerHTML;
+        abc.innerHTML=content1;
+    }
+ 
+    </script>
+</body>
+</html>
