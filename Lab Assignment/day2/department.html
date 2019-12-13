@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin:0;
+            }
+            #header{  
+                height: 15vh;
+                background-color: rgb(223, 184, 184);
+            }
+           #outer{
+         
+               height:85vh;
+               background-color:rgb(184, 223, 184);
+           }
+            #footer{
+                height:15vh;
+                background-color: rgb(224, 197, 187);
+            }
+            #left{
+               
+                float: left;
+               width:30%;
+               height:100%;
+                background-color: rgb(193, 241, 241);
+            }
+            #right{
+             
+                float:right;
+                width:70%;
+               height:100%;
+                background-color: darkgrey;
+                overflow: scroll;
+            }
+            #span1{
+                margin-left: 87%;
+            }
+            span{
+                font-size: 20px;
+               
+            }
+            .hov:hover{
+                color: darkgrey;
+            }
+            ul{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        
+            <div id="header">
+                <span id="span1">About &nbsp;</span>
+                <span >Contact US</span>
+            </div>
+
+            <div id="outer">
+                <div id="left">
+                    <ul style="list-style-type: none;font-family:Arial, Helvetica, sans-serif">
+                        <li class="hov">DAC</li><br>
+                        <li class="hov">DESD</li><br>
+                        <li class="hov">DBDA</li>
+                    </ul>
+                </div>
+                <div id="right">
+                    <h2>Introduction</h2>
+                    <p>
+                        Dac couse contans following subjects
+                    </p>
+                    <h3>Dac course have following Subjects</h3>
+                    <ol>
+                        <li>OOPS</li>
+                        <li>AWP</li>
+                        <li>JAVA</li>
+                        <li>J2EE</li>
+                        <li>DEV-OPS</li>
+                        <li>DTABASE TACHNOLOGY</li>
+                    </ol>
+                    <h3>FAcilities</h3>
+                    <ol>
+                           <li><a href="https://en.wikipedia.org/wiki/Wi-Fi">WI-FI</a></li>
+                           <li><a href="https://en.wikipedia.org/wiki/Local_area_network">LAN</a></li>
+                    </ol>
+                    <h4><i>Some Images</i></h4>
+                    <a href="https://www.google.com" ><img src="google.png" alt="Image not found" height="400px" width="400px"></a>
+
+                    <button style="height: 1cm;" onclick="top1()">TOP</button>
+                    
+                </div>
+            </div>
+
+           
+      <script>
+      function top1()
+      {
+        document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+      }
+      </script>
+    </body>
+</html>

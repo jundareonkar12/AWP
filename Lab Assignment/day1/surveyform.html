@@ -16,13 +16,14 @@
   </style>
  
 </head>
-<body style="background-color: turquoise;">
+<body style="background-color: turquoise;overflow: scroll;">
     <h1><b><center>Survey Form</center></b></h1>
    <div style="background-color: white; " id="divst">
 
  <h2><center >Let us know how we can improve freecodecamp</center></h2>
+ <form action="">
  <table align="center">
-     <tr><td style="text-align: right;"> <span style="color: red;">*</span>Name:</td><td><input type="text"  placeholder="Enter your name" id="name" minlength="3" maxlength="20" onkeypress="return(event.charCode>64 && event.charCode<91)||(event.charCode>96 && event.charCode<123)" ></td></tr>
+     <tr><td style="text-align: right;"> <span style="color: red;">*</span>Name:</td><td><input type="text" placeholder="Enter your name" id="name" minlength="3" maxlength="20" onkeypress="return(event.charCode>64 && event.charCode<91)||(event.charCode>96 && event.charCode<123)" required></td></tr>
 
  <tr><td style="text-align: right;"><span style="color: red;">*</span>Email </td><td><input type="text"  placeholder="Enter your Email" id="email"></td></tr>
  <tr><td style="text-align: right;"><span style="color: red;">*</span>Age: </td><td><input type="number"  placeholder="Enter your Age" id="age"></td></tr>
@@ -77,22 +78,19 @@
             </td>
         </tr>
    </table>
- 
+</form>
 </div>
 <div id="div2">
 
 </div>
 <script>
-    function checkname(){
+    function checknam(){
        var radiovar;
         var varname=document.getElementById("name").value;
         var varemail=document.getElementById("email").value;
         var varage=document.getElementById("age").value;
            
-        if(varname.length<1)
-        {
-            alert("name should not be empty");
-        }
+       
         if(!varemail.includes("@"))
         {
             alert("please enter proper email");
@@ -116,8 +114,8 @@
         }
 /*below code not working*/
         var content1="<table><tr><th>Name</th><th>Email</th><th>Age</th><th>Improved_In_Futute</th></tr><tr><td>"+varname+"</td><td>"+varemail+"</td><td>"+varage+"</td><td>"+radiovar+"</td></tr></table>";
-        var abc=document.getElementById("div2").innerHTML;
-        abc.innerHTML=content1;
+       document.getElementById("div2").innerHTML=content1;
+        
     }
  
     </script>
