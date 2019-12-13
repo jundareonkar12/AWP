@@ -73,10 +73,10 @@
                     <tr><td onclick="intro()">Introduction</td></tr>
                     <tr><td>What You Should Already Know</td></tr>
                     <tr><td>Java Script And java</td></tr>
-                    <tr><td onclick="document.getElementById('rightdiv').innerHTML='<p>Hello-javaScript</P>'">Hello-World</td></tr>
-                    <tr><td>Variables</td></tr>
+                    <tr><td onclick="document.getElementById('rightdiv').innerHTML='<h2>Basic-Program</h2><p>Hello-javaScript</P>'">Hello-World</td></tr>
+                    <tr><td onclick="vars()">Variables</td></tr>
                     <tr><td>Declaring Variables</td></tr>
-                    <tr><td>VAriable Scope</td></tr>
+                    <tr><td>Variable Scope</td></tr>
                 </table>
             </div>
             <div id="rightdiv">
@@ -93,6 +93,24 @@
             " JavaScript and Java are very much unrelated. Java is a very complex programming language whereas JavaScript is only a scripting language. The syntax of JavaScript is mostly influenced by the programming language C.</p>"
             
             document.getElementById("rightdiv").innerHTML=intr;
+        }
+        function vars()
+        {
+            var var1="<h2>Variables</h2>"+"<p>JavaScript Datatypes"+
+"One of the most fundamental characteristics of a programming language is the set of data types it supports. These are the type of values that can be represented and manipulated in a programming language."+
+
+"JavaScript allows you to work with three primitive data types −"+
+
+"Numbers, eg. 123, 120.50 etc."+
+
+"Strings of text e.g. 'This text string' etc."+
+
+"Boolean e.g. true or false."+
+
+"JavaScript also defines two trivial data types, null and undefined, each of which defines only a single value. In addition to these primitive data types, JavaScript supports a composite data type known as object. We will cover objects in detail in a separate chapter."+
+
+"Note − JavaScript does not make a distinction between integer values and floating-point values. All numbers in JavaScript are represented as floating-point values. JavaScript represents numbers using the 64-bit floating-point format defined by the IEEE 754 standard.</P>"
+document.getElementById("rightdiv").innerHTML=var1;
         }
         </script>
     </body>
