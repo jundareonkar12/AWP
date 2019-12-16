@@ -6,34 +6,37 @@
                 margin:0;
             }
             #header{  
+                position: relative;
+                border-bottom: 2px solid powderblue;
                 height: 15vh;
-                background-color: rgb(223, 184, 184);
             }
            #outer{
          
                height:85vh;
-               background-color:rgb(184, 223, 184);
+               
            }
             #footer{
                 height:15vh;
-                background-color: rgb(224, 197, 187);
+               
             }
             #left{
-               
+                position:relative;
                 float: left;
                width:30%;
                height:100%;
-                background-color: rgb(193, 241, 241);
+               
             }
             #right{
-             
+            
                 float:right;
                 width:70%;
                height:100%;
-                background-color: darkgrey;
+                
                 overflow: scroll;
             }
             #span1{
+               
+                margin-top: 5px;
                 margin-left: 87%;
             }
             span{
@@ -49,6 +52,7 @@
                 text-align: center;
                 font-style: italic;
             }
+            
         </style>
     </head>
     <body>
@@ -61,7 +65,7 @@
             <div id="outer">
                 <div id="left">
                     <ul style="list-style-type: none;font-family:Arial, Helvetica, sans-serif">
-                        <li class="hov">DAC</li><br>
+                        <li class="hov adj">DAC</li><br>
                         <li class="hov">DESD</li><br>
                         <li class="hov">DBDA</li>
                     </ul>
@@ -98,7 +102,7 @@
       function top1()
       {
         document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
       </script>
     </body>
