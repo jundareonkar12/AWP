@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function validateForm() {
+            var name = $("#name").val();
+            var age = $("#age").val();
+            var isBlank = isNullorEmpty(name) && isNullorEmpty(age);
+            var isNumber = !isNaN(age);
+            if (isBlank && isNumber)
+                return true;
+            else {
+                $("#msg").text("Please fill Mandatory fields");
+                $("#msg").css("color","red");
+                return false;
+            }
+        }
+        function isNullorEmpty(param) {
+            return (param == null || param == "" || param == undefined) ? false : true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form action="validate.php" method="post" onsubmit="return validateForm();">
+            <span id="msg"></span>
+            <table style="width:100%;">
+                <tr>
+                    <td>Name</td>
+                    <td><input id="name" name="name" type="text" />
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input id="age" type="text" name="age" />
+                        </td>
+                </tr>
+                <tr>
+                   
+                    <td><input id="submit" type="submit" value="Submit"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
